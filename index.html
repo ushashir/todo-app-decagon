@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+</head>
+
+<body class="container">
+    <h1 class="text-center">Todo App</h1>
+    <section>
+        <div class="row justify-content-md-center">
+            <div class="col-xs-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">🔎</span>
+                    <input type="text" class="form-control" id="search-input" placeholder="Search"
+                        aria-label="Search" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <span class="text-muted" id="edit-text"></span>
+        <form id="todo-form">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="todo-input" autocomplete="off" placeholder="Todo Text"
+                    aria-label="Enter Todo Text" />
+                <button id="todo-btn" class="btn btn-outline-secondary" type="submit">
+                    Add Todo
+                </button>
+            </div>
+        </form>
+        <hr />
+        <ul class="list-group" id="todo-list"></ul>
+        <div class="todo-intro">Type into the input to add a todo</div>
+    </main>
+    <template id="todo-item">
+        <li class="list-group-item">
+            <p class="lead"></p>
+            <div class="float-end">
+                <span class="text-muted"></span>
+                <button class="btn btn-default btn-xs edit-btn" aria-label="Edit Todo Item">
+                    ✏️
+                </button>
+                <button class="btn btn-default btn-xs delete-btn" aria-label="Delete Todo Item">
+                    ❌
+                </button>
+            </div>
+        </li>
+    </template>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

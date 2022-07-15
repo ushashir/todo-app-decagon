@@ -1,0 +1,7 @@
+.todo-intro {
+    display: none;
+}
+
+ul:empty+.todo-intro {
+    display: block;
+}
